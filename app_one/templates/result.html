@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
 </head>
 <body>
-    <main>
+    <main id="wrapper">
         <h1>Info Submitted:</h1>
             <p>Name: {{ name_template }}</p>
             <p>Email: {{ email_template }}</p>
+            <p>Favorite Coding Language: {{ language_template}}</p>
+            <p>Location: {{ location_template }}</p>
     </main>
 </body>
 </html>

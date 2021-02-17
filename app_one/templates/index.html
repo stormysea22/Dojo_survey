@@ -4,19 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <title>Document</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
 </head>
 <body>
     <main id="wrapper">
-        <h1>Index page</h1>
+        <h1>Dojo Survey</h1>
         <h3>Create a User</h3>
-        <form action="/create_user" method="POST">
+        <form action="/create_user" method="POST" class="form-group">
             {% csrf_token %}
-            name: <input type="text" name="name">
-            email: <input type="text" name="email">
-            <button type="submit">Submit</button>
+            Name: <input type="text" name="name" class="form-control">
+            Email: <input type="text" name="email" class="form-control">
+            Favorite Coding Langauge:<br/>
+            Python: <input type="radio" name="language" value="Python" id="Python" class="radio-inline">
+            Jave: <input type="radio" name="language" value="Jave" id="Java" class="radio-inline">
+            C++: <input type="radio" name="language" value="C++" id="C++" class="radio-inline"><br/>
+            Location:<br/>
+            <select name="location" id="location">
+                <option value="dallas">Dallas</option>
+                <option value="chicago">Chicago</option>
+                <option value="washington_DC">Washington D.C.</option>
+                <option value="seattle">Seattle</option>
+            </select>
+            <button type="submit" id="submit">Submit</button>
         </form>
     </main>
 </body>

@@ -1,0 +1,27 @@
+#wrapper {
+    width: 900px;
+    margin: 0 auto;
+    border: solid black 1px;
+    padding: 20px;
+    background-color: lightgrey;
+}
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+#location {
+    width: 25%;
+    display: block;
+}
+
+#submit {
+    display: block;
+    margin: 0 auto;
+    margin-top: 5px;
+
+}
